@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microservices App</title>
+</head>
+<body>
+    <h1>Welcome to the Microservices Application</h1>
+    <p id="data">Fetching data from the backend...</p>
+    <script>
+        fetch('http://localhost:3000/api')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('data').innerText = data.message;
+        });
+    </script>
+</body>
+</html>
